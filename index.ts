@@ -1,5 +1,5 @@
-import { definePlugin } from "vencord/utils";
-import { findByStoreName } from "vencord/webpack";
+import definePlugin from "@utils/types";
+import { WindowStore } from "@webpack/common";
 
 let originalHasFocus: () => boolean;
 let originalIsFocused: (() => boolean) | undefined;
@@ -8,7 +8,7 @@ let eventHandler: (e: Event) => void;
 export default definePlugin({
     name: "ContinueWatching",
     description: "Continues playing quest videos when Discord loses focus by overriding window focus state.",
-    authors: [{ name: "Antigravity", id: "0" }],
+    authors: [{ name: "Antigravity", id: 0n }],
     
     start() {
         // 1. Override document.hasFocus
@@ -37,7 +37,6 @@ export default definePlugin({
 
         // 4. Override Discord's internal WindowStore focus state
         try {
-            const WindowStore = findByStoreName("WindowStore");
             if (WindowStore && typeof WindowStore.isFocused === "function") {
                 originalIsFocused = WindowStore.isFocused;
                 WindowStore.isFocused = () => true;
@@ -65,7 +64,6 @@ export default definePlugin({
 
         // Restore WindowStore
         try {
-            const WindowStore = findByStoreName("WindowStore");
             if (WindowStore && originalIsFocused) {
                 WindowStore.isFocused = originalIsFocused;
             }
