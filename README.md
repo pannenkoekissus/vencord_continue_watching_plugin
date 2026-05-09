@@ -2,7 +2,7 @@ Disclaimer:
 Using this plugin is at YOUR OWN RISK. I don't support nor promote actions against discords TOS.
 
 What this vencord plugin does:
-This plugin doesn't stop a (quest) video when you click on a different window. This is done by modifying the checks that check if the discord window is the top window. Those checks will always result in true. This may have unforseen side effects. 
+This plugin doesn't stop a (quest) video when you click on a different window. This is done by modifying the checks that check if the discord window is the top window. Those checks will always result in true. This may have unforseen side effects. If you encounter any side effects, please report them via issues on this github
 
 LICENSE:
 MIT
