@@ -18,7 +18,7 @@ How to install:
 7. in the vencord directory, run pnpm build
 8. in the vencord directory, run pnpm inject
 9. reboot/start discord
-10. enable the plugin in the plugins tab of vencord (search continue, you'll find it)
+10. enable the plugin in the plugins tab of vencord (search ContinueWatching, you'll find it)
 11. enjoy
 
 This plugin will likely not get you banned from discord missions/quests. If this does happen, the readme will be updated. 
