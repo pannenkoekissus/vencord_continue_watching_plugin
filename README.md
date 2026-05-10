@@ -12,7 +12,7 @@ How to install:
 1. clone the vencord repository
 2. install pnpm
 3. clone this repository
-4. make a new directory in the plugins folder
+4. make a new directory named ContinueWatching in the src/plugins folder
 5. copy the index.ts script into that folder
 6. in the vencord directory, run pnpm install
 7. in the vencord directory, run pnpm build
